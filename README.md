@@ -1,2 +1,0 @@
-# drupal
-Snippets para drupal
