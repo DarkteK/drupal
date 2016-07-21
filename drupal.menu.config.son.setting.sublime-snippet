@@ -8,7 +8,7 @@
  *
  * Types:  // Para una lista completa : https://api.drupal.org/api/drupal/developer!topics!forms_api_reference.html/7.x
  * fieldset , textfield , password , textarea , checkbox , radio
- * 
+ *
  */
 function ${1:my-module}_admin_settings() {
   $form['${1:my-module}_settings'] = array(
@@ -28,7 +28,7 @@ function ${1:my-module}_admin_settings() {
   return system_settings_form($form);
 }
 ]]></content>
-<tabTrigger>drupal.menu.config.son.setting</tabTrigger>
+<tabTrigger>drupal_menu_config_son_setting</tabTrigger>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<!-- <tabTrigger>hello</tabTrigger> -->
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->

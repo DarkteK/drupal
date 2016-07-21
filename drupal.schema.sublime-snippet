@@ -1,0 +1,53 @@
+<snippet>
+	<content><![CDATA[
+
+/**
+ * Implements hook_schema().
+ * El primer campo es guardado como primary key
+ * Segundo y tercer campo como indexes
+ * Tercer campo para fecha
+ */
+function ${1:my_module}_schema() {
+  $schema['${1:my_module}'] = array(
+    'description' => '${2:TableDescription}',
+    'fields' => array(
+      '${3:id}' => array(
+        'description' => 'The primary identifier',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      '${4:uid}' => array(
+        'description' => 'User Id',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      '${5:varchar_field}' => array(
+        'description' => '${6:descriptionField}',
+        'type' => 'varchar',
+        'length' => 60,
+        'not null' => FALSE,
+      ),
+      '${5:date_field}' => array(
+        'description' => 'The Unix timestamp',
+        'type' => 'varchar',
+        'mysql_type' => 'datetime',
+        'not null' => FALSE,
+      ),
+    ),
+    'primary key' => array('${3:id}'),
+    'indexes' => array(
+      '${4:uid}'       => array('${4:uid}'),
+      '${5:varchar_field}'        => array('${5:varchar_field}'),
+    ),
+  );
+  return $schema;
+}
+]]></content>
+<tabTrigger>drupal_schema</tabTrigger>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

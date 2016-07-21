@@ -4,7 +4,7 @@
  * Implements hook_menu().
  */
 function ${1:my_module}_menu() {
- 
+
   $items['admin/${1:my-module}/${2:title}'] = array(
     'title' => '${3:Title}',
     'description' => t('${4:Description}'),
@@ -18,7 +18,7 @@ function ${1:my_module}_menu() {
   return $items;
 }
 
-/** Esto le da al admin permiso para acceder al modulo 
+/** Esto le da al admin permiso para acceder al modulo
  * Implements hook_permission().
  * IMPORTANTE Crear y entrar al archivo ${1:my-module}.admin.inc y usar el snippet drupal.menu.config.son.setting **************************************************
  */
@@ -31,7 +31,7 @@ function ${1:my-module}_permission() {
   );
 }
 ]]></content>
-<tabTrigger>drupal.menu.config.son</tabTrigger>
+<tabTrigger>drupal_menu_config_son</tabTrigger>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<!-- <tabTrigger>hello</tabTrigger> -->
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
