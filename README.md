@@ -1,5 +1,4 @@
-# drupal
-Snippets para Sublime en un proyecto de drupal
+# Sublime Snippets for Drupal
 
 Cotidianamente nos encontramos con tareas repetitivas a la hora de programar, 
 así que para terminar rápido y poder enfocarnos en algo de mayor dificultad he creado ciertos snippets que facilitan la vida
