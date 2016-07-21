@@ -1,0 +1,36 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * Administration settings form.
+ *
+ * @return
+ *   The completed form definition.
+ *
+ * Types:  // Para una lista completa : https://api.drupal.org/api/drupal/developer!topics!forms_api_reference.html/7.x
+ * fieldset , textfield , password , textarea , checkbox , radio
+ * 
+ */
+function ${1:my-module}_admin_settings() {
+  $form['${1:my-module}_settings'] = array(
+    '#type'  => 'fieldset',
+    '#title' => t('${2:TitleSettings}'),
+  );
+  $form['${1:my-module}_settings']['${1:my-module}_${3:texto}'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('${4:TitleField}'),
+    '#default_value' => variable_get('${1:my-module}_${3:texto}', '${5:variableToUse}'),
+    '#description'   => t('${6:DescriptionField}'),
+    '#required' => FALSE, // Puede ser TRUE
+  );
+
+  );
+
+  return system_settings_form($form);
+}
+]]></content>
+<tabTrigger>drupal.menu.config.son.setting</tabTrigger>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

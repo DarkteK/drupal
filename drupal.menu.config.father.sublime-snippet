@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * Implements hook_menu().
+ */
+function ${1:my_module}_menu() {
+ 
+  $items['admin/${1:my_module}'] = array(
+    'title' => '${2:My module admin page}',       
+    'page callback' => 'system_admin_menu_block_page',
+    'position' => 'left',       
+    'access arguments' => array('access administration pages'),
+    'file path' => drupal_get_path('module', 'system'),   
+    'file' => 'system.admin.inc',
+  );
+ 
+  return $items;
+}
+]]></content>
+<tabTrigger>drupal.menu.config.father</tabTrigger>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
