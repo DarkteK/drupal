@@ -4,21 +4,21 @@
  * Implements hook_menu().
  */
 function ${1:my_module}_menu() {
- 
+
   $items['${2:urlForThis}'] = array(
-    'title' => '${3:TitleUrl}',       
-    'page callback' => '${1:my_module}_${3:FuctionToUse}',
+    'title' => '${3:TitleUrl}',
+    'page callback' => '${1:my_module}_${4:FuctionToUse}',
     'access callback' => TRUE,
   );
- 
+
   return $items;
 }
 
 /**
  * ${1:my_module} Callback for ${3:TitleUrl}
  */
-function ${1:my_module}_${3:FuctionToUse}(){
-  
+function ${1:my_module}_${4:FuctionToUse}(){
+
 }
 
 ]]></content>
