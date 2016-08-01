@@ -2,10 +2,10 @@
 	<content><![CDATA[
 /**
  * Implements hook_menu().
- */
+*/
 function ${1:my_module}_menu() {
 
-  $items['admin/${1:my-module}/${2:title}'] = array(
+  \$items['admin/${1:my-module}/${2:title}'] = array(
     'title' => '${3:Title}',
     'description' => t('${4:Description}'),
     'page callback' => 'drupal_get_form',
@@ -15,13 +15,13 @@ function ${1:my_module}_menu() {
     'weight' => -2,
   );
 
-  return $items;
+  return \$items;
 }
 
 /** Esto le da al admin permiso para acceder al modulo
  * Implements hook_permission().
  * IMPORTANTE Crear y entrar al archivo ${1:my-module}.admin.inc y usar el snippet drupal.menu.config.son.setting **************************************************
- */
+*/
 function ${1:my-module}_permission() {
   return array(
     '${1:my-module}_perm' => array(

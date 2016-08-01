@@ -5,7 +5,7 @@
  */
 function ${1:my_module}_menu() {
 
-  $items['admin/${1:my_module}'] = array(
+  \$items['admin/${1:my_module}'] = array(
     'title' => '${2:My module admin page}',
     'page callback' => 'system_admin_menu_block_page',
     'position' => 'left',
@@ -14,7 +14,7 @@ function ${1:my_module}_menu() {
     'file' => 'system.admin.inc',
   );
 
-  return $items;
+  return \$items;
 }
 ]]></content>
 <tabTrigger>drupal_menu_config_father</tabTrigger>

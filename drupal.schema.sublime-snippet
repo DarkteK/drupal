@@ -2,13 +2,13 @@
 	<content><![CDATA[
 
 /**
- * Implements hook_schema().
- * El primer campo es guardado como primary key
- * Segundo y tercer campo como indexes
- * Tercer campo para fecha
- */
+* Implements hook_schema().
+* El primer campo es guardado como primary key
+* Segundo y tercer campo como indexes
+* Tercer campo para fecha
+*/
 function ${1:my_module}_schema() {
-  $schema['${1:my_module}'] = array(
+  \$schema['${1:my_module}'] = array(
     'description' => '${2:TableDescription}',
     'fields' => array(
       '${3:id}' => array(
@@ -42,7 +42,7 @@ function ${1:my_module}_schema() {
       '${5:varchar_field}'        => array('${5:varchar_field}'),
     ),
   );
-  return $schema;
+  return \$schema;
 }
 ]]></content>
 <tabTrigger>drupal_schema</tabTrigger>
